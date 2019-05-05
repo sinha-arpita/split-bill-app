@@ -1,0 +1,25 @@
+.myForm{
+
+   height:500px;
+   /* border:2px solid purple;
+   background-color: rgb(221, 178, 221); */
+}
+
+
+
+.EventName{
+      background-color:whitesmoke;
+      height:30px;
+      width:180px;
+      border:1.5px solid black;
+      font-size: 16px;
+
+}
+button{
+    height:30px;
+    width:100px;
+    font-weight: bold;
+    border:1px solid black;
+
+
+}

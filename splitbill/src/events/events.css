@@ -1,0 +1,15 @@
+.dashboard {
+  height: 100%;
+  width: 30%;
+}
+
+.new {
+  height: 80px;
+  width: 100%;
+  color: black;
+
+  font-style: italic;
+
+  text-align: center;
+  margin-top: 20px;
+}

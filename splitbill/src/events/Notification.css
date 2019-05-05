@@ -1,0 +1,45 @@
+.dues {
+  margin-top: 20px;
+}
+
+.params {
+  color: red;
+}
+
+.heads {
+  background-color: plum;
+  height: 80px;
+  border: 2px solid purple;
+}
+.notification {
+  border: 2px solid purple;
+  width: 40%;
+  height: 60px;
+
+  color: black;
+  font-style: italic;
+  background-color: plum;
+  text-align: center;
+  margin-top: 10px;
+  border-right: 1px solid purple;
+  text-align: center;
+}
+
+.duesTable {
+  color: red;
+  font-weight: 1em;
+}
+.duesForm {
+  margin-top: 30px;
+  font-size: 18px;
+  background-color: mediumslateblue;
+  color: white;
+  font-style: normal;
+}
+.RecieveForm {
+  margin-top: 30px;
+  font-size: 18px;
+  background-color: rgb(160, 13, 140);
+  color: white;
+  font-style: normal;
+}

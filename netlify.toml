@@ -1,0 +1,4 @@
+[build]
+base = "mySplitBill-frontEnd/"
+publish = "mySplitBill-frontEnd/build/"
+command = "yarn build"
