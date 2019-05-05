@@ -1,0 +1,4 @@
+[build]
+base = "splitbill/"
+publish = "splitbill/build/"
+command = "yarn build"
