@@ -37,9 +37,6 @@ class App extends Component {
       });
   };
 
-  eventCreated = () => {
-    this.setState({});
-  }
 
   render() {
     if (this.state.signedInUser) {

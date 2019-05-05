@@ -2,7 +2,9 @@ import React from "react";
 import axios from "axios";
 import "./Notification.css";
 import Table from "react-bootstrap/Table";
-
+//+14085835174
+//SID : ACdc99e303eb69eb0651ded206f69ced7d
+//auth token 21f6f60a58b904a921f624a9456e4f21
 class Notifications extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +17,8 @@ class Notifications extends React.Component {
   componentDidMount() {
     // Call axios to get dues,.
     // set dues in state
-    const endpoint = "https://arpita-sinha-split-the-bill.herokuapp.com/api/events/getdues";
+    const endpoint =
+      "https://arpita-sinha-split-the-bill.herokuapp.com/api/events/getdues";
     const headers = {
       "Content-Type": "application/json",
       authorization: localStorage.getItem("jwt")
@@ -33,7 +36,8 @@ class Notifications extends React.Component {
         });
       });
 
-    const Rendpoint = "https://arpita-sinha-split-the-bill.herokuapp.com/api/events/recievables";
+    const Rendpoint =
+      "https://arpita-sinha-split-the-bill.herokuapp.com/api/events/recievables";
     const headers2 = {
       "Content-Type": "application/json",
       authorization: localStorage.getItem("jwt")
@@ -55,6 +59,18 @@ class Notifications extends React.Component {
         });
       });
   }
+  clickHandler = event => {
+    event.preventDefault();
+    const Bendpoint = "http://localhost:9090/api/events/sendmessage";
+    const headers3 = {
+      "Content-Type": "application/json",
+      authorization: localStorage.getItem("jwt")
+    };
+
+    // axios.post(Bendpoint,{headers:headers3})
+    // .then(res)
+  };
+
   render() {
     console.log("User recv", this.state.userRecievables);
 
@@ -90,7 +106,10 @@ class Notifications extends React.Component {
             <tr>
               <th>Name</th>
               <th>Email</th>
+              <th> Phone</th>
               <th>To Pay</th>
+
+              <th> Send Message </th>
             </tr>
           </thead>
           <tbody>
@@ -99,7 +118,16 @@ class Notifications extends React.Component {
                 <tr>
                   <td>{recievable.username}</td>
                   <td>{recievable.email}</td>
+                  <td>{recievable.phone}</td>
                   <td>{recievable.to_get}</td>
+                  <td>
+                    <button
+                      OnClick={this.clickHandler}
+                      username={recievable.username}
+                      phone={recievable.phone}
+                      toget={recievable.to_get}
+                    />
+                  </td>
                 </tr>
               );
             })}

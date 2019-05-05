@@ -31,7 +31,8 @@ class Dashboard extends React.Component {
   }
 
   eventCreated = () => {
-    this.props.eventCreated();
+    console.log("Event created ...")
+    this.setState({})
   }
   render() {
     return (

@@ -59,6 +59,7 @@ class EventsForm extends React.Component {
   };
   clickHandler = event => {
     event.preventDefault();
+    
     let newEvent = {
       event_name: this.state.event_name,
       description: this.state.event_description,
@@ -119,6 +120,7 @@ class EventsForm extends React.Component {
       particiants: []
     });
 
+    console.log("calling event = ");
     this.props.eventCreated();
   };
 
