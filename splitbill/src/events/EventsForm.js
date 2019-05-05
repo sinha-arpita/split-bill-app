@@ -95,7 +95,7 @@ class EventsForm extends React.Component {
       authorization: localStorage.getItem("jwt")
     };
 
-    const endpoint = "http://localhost:9090/api/events";
+    const endpoint = "https://arpita-sinha-split-the-bill.herokuapp.com/api/events/";
     axios
       .post(endpoint, newEvent, { headers: headers })
       .then(res => {

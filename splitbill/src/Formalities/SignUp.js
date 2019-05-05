@@ -19,7 +19,7 @@ class SignUp extends React.Component{
   }
   submitHandler=(event)=>{
 
-    const endpoint="http://localhost:9090/api/auth/register"
+    const endpoint="https://arpita-sinha-split-the-bill.herokuapp.com/api/auth/register"
     axios.post(endpoint,this.state)
     console.log("REGISTER",endpoint,this.state)
        .then(res=>{

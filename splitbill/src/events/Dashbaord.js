@@ -14,7 +14,7 @@ class Dashboard extends React.Component {
   componentDidMount() {
     const headers = { authorization: localStorage.getItem("jwt") };
 
-    const endpoint = "http://localhost:9090/api/users/";
+    const endpoint = "https://arpita-sinha-split-the-bill.herokuapp.com/api/users/";
     axios
       .get(endpoint, { headers })
       .then(res => {

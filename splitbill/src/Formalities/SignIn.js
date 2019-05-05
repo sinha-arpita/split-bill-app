@@ -17,7 +17,7 @@ class SignIn extends React.Component {
   submitHandler = event => {
     event.preventDefault();
     console.log("Logging in...");
-    const endpoint = "http://localhost:9090/api/auth/login";
+    const endpoint = "https://arpita-sinha-split-the-bill.herokuapp.com/api/auth/login";
     axios
       .post(endpoint, this.state)
       .then(res => {

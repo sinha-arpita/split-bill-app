@@ -27,7 +27,7 @@ class App extends Component {
     console.log("New Event ");
     console.log(newEvent);
     axios
-      .post("http://localhost:9090/api/events/", { headers }, newEvent)
+      .post("https://arpita-sinha-split-the-bill.herokuapp.com/api/events/", { headers }, newEvent)
       .then(res => {
         console.log("POST reply came ... ", res);
         //here the data came in res.data.success

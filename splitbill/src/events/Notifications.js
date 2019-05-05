@@ -15,7 +15,7 @@ class Notifications extends React.Component {
   componentDidMount() {
     // Call axios to get dues,.
     // set dues in state
-    const endpoint = "http://localhost:9090/api/events/getdues";
+    const endpoint = "https://arpita-sinha-split-the-bill.herokuapp.com/api/events/getdues";
     const headers = {
       "Content-Type": "application/json",
       authorization: localStorage.getItem("jwt")
@@ -33,7 +33,7 @@ class Notifications extends React.Component {
         });
       });
 
-    const Rendpoint = "http://localhost:9090/api/events/recievables";
+    const Rendpoint = "https://arpita-sinha-split-the-bill.herokuapp.com/api/events/recievables";
     const headers2 = {
       "Content-Type": "application/json",
       authorization: localStorage.getItem("jwt")
