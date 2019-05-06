@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
+import "./App.css";
 
 class Users extends React.Component {
   state = {
@@ -12,7 +13,7 @@ class Users extends React.Component {
       <div>
         <h2> My Friends </h2>
 
-        <Table>
+        <Table className=".table3">
           <thead>
             <tr>
               <th>Name</th>

@@ -1,15 +1,17 @@
 .dashboard {
   height: 100%;
-  width: 30%;
+  width: 25%;
+  border:1px solid lightgray;
 }
 
 .new {
   height: 80px;
   width: 100%;
-  color: black;
+  color: purple;
 
   font-style: italic;
 
   text-align: center;
   margin-top: 20px;
+  border-radius:1px solid lightgray;
 }

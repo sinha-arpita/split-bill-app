@@ -59,28 +59,41 @@ class Notifications extends React.Component {
         });
       });
   }
-  clickHandler = event => {
+  
+
+  sendMessageClickHandler = event => {
     event.preventDefault();
-    const Bendpoint = "http://localhost:9090/api/events/sendmessage";
-    const headers3 = {
-      "Content-Type": "application/json",
-      authorization: localStorage.getItem("jwt")
+    console.log("Button clicked...");
+    console.log(event.target.getAttribute("username"));
+    const sendMsg = {
+      username: event.target.getAttribute("username"),//event.target gives you element
+      phone: event.target.getAttribute("phone"),
+      to_get: event.target.getAttribute("to_get")
     };
 
-    // axios.post(Bendpoint,{headers:headers3})
-    // .then(res)
-  };
+    console.log("Sending message ", sendMsg);
+    const endpoint = "https://arpita-sinha-split-the-bill.herokuapp.com/api/events/sendmessage";
+    const headers3 = {
+      "Content-Type": "application/json",
+       authorization: localStorage.getItem("jwt")
+    };
 
+    axios.post(endpoint,sendMsg,{headers:headers3})
+    .then(res => {
+      console.log("Get RESPONSE", res);
+    })
+  };
+ 
   render() {
     console.log("User recv", this.state.userRecievables);
-
+//striped bordered hover
     return (
-      <div className=".notification">
-        <h2> My Dues </h2>
-        <Table striped bordered hover>
+      <div className=".notify">
+        <h2 className="my"> My Dues </h2>
+        <Table className="table2">
           <thead>
             <tr>
-              <th>Name</th>
+              <th >Name</th>
               <th>Email</th>
               <th>To Pay</th>
             </tr>
@@ -90,9 +103,9 @@ class Notifications extends React.Component {
             {this.state.userDues.map(due => {
               return (
                 <tr>
-                  <td>{due.username}</td>
-                  <td>{due.email}</td>
-                  <td>{due.amount_to_pay}</td>
+                  <td className="td">{due.username}</td>
+                  <td  className="td">{due.email}</td>
+                  <td  className="td">{due.amount_to_pay}</td>
                 </tr>
               );
             })}
@@ -101,7 +114,7 @@ class Notifications extends React.Component {
 
         <h2> My Recievables </h2>
 
-        <Table striped bordered hover>
+        <Table className="table2">
           <thead>
             <tr>
               <th>Name</th>
@@ -122,11 +135,14 @@ class Notifications extends React.Component {
                   <td>{recievable.to_get}</td>
                   <td>
                     <button
-                      OnClick={this.clickHandler}
+                      onClick={this.sendMessageClickHandler}
                       username={recievable.username}
                       phone={recievable.phone}
-                      toget={recievable.to_get}
-                    />
+                      to_get={recievable.to_get}
+                      send
+                    >
+                      send
+                    </button>
                   </td>
                 </tr>
               );

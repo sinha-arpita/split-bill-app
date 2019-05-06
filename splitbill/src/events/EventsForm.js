@@ -205,7 +205,7 @@ class EventsForm extends React.Component {
         </Dropdown> */}
         <br />
 
-        <h4>PaidBy</h4>
+        <h4 className="head">PaidBy</h4>
         <div>
           <input
             type="text"
@@ -218,7 +218,7 @@ class EventsForm extends React.Component {
         </div>
 
         <br />
-        <h4>Participants</h4>
+        <h4 className="head">Participants</h4>
         <textarea
           type="text"
           cols="50"

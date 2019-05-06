@@ -42,9 +42,15 @@ class App extends Component {
     if (this.state.signedInUser) {
       return (
         <div className="App">
-         <h2 className="welcome"> Split-the-Bills </h2>
-         <h3>Welcome {this.state.signedInUser}!</h3>
-         <button onClick ={this.logoutHandler} >Logout</button>
+         
+            <h2 className="welcome"> Split-the-Bills </h2>
+            <div className="top">
+             
+              <h2 className="user">Welcome {this.state.signedInUser}!</h2>
+              <button onClick ={this.logoutHandler} className="btn" >Logout</button>
+          
+           </div>
+         
           <hr />
           <main className="main">
             <Dashbaord  eventCreated={this.eventCreated} />
@@ -59,7 +65,7 @@ class App extends Component {
       );
     } else {
       return (
-        <div className="App">
+        <div className="Appy">
           {/* <header className="main">
             <NavLink to="/signup">SignUp </NavLink>
             &nbsp; | &nbsp;
@@ -77,7 +83,7 @@ class App extends Component {
           </main> */}
           
           <header className="main"> 
-              <h1 className="header"> SPLIT-THE-BILLS</h1>  
+              <h1 className="header"> Split-the-Bills</h1>  
           </header>
 
           <div className="log">

@@ -2,18 +2,18 @@
   margin-top: 20px;
 }
 
-.params {
-  color: red;
-}
-
 .heads {
   background-color: plum;
   height: 80px;
   border: 2px solid purple;
 }
+.notify {
+  width: 50%;
+  height: 80px;
+}
 .notification {
   border: 2px solid purple;
-  width: 40%;
+  width: 50%;
   height: 60px;
 
   color: black;
@@ -24,10 +24,38 @@
   border-right: 1px solid purple;
   text-align: center;
 }
+.my {
+  font-size: 30px;
+  font-style: italic;
+  color: purple;
+  margin-right: 30px;
+
+  margin-top: 10px;
+}
 
 .duesTable {
   color: red;
-  font-weight: 1em;
+  font-weight: bold;
+  background-color: lightgoldenrodyellow;
+  font-size: 16px;
+  border: 1px solid blue;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.table2 {
+  /* background-color: lavenderblush; */
+  width: 500px;
+  
+}
+
+.table3 {
+  background-color:lightcyan;
+  width: 300px;
+  
+}
+
+.td {
+  margin-right: 30px;
 }
 .duesForm {
   margin-top: 30px;
@@ -35,6 +63,7 @@
   background-color: mediumslateblue;
   color: white;
   font-style: normal;
+  border: 1px solid blue;
 }
 .RecieveForm {
   margin-top: 30px;

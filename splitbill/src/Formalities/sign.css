@@ -1,13 +1,4 @@
-.header{
-    text-align: center;
-    font-size: 2.5em;
-    font-style: italic;
-    color:dodgerblue;
 
-    
-
-
-}
 
 
 .sign {
@@ -18,7 +9,7 @@
     font-style: italic;
   
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     
    }
    .form{
@@ -32,14 +23,16 @@
      height:40px;
      font-size:18px;
      text-align: center;
-     background-color: lightcyan;
+     background-color:rgb(241, 227, 239);
+     border: 1px solid black;
 
    }
-   .button{
+   button{
     width:100px;
     height:40px;
     font-size:16px;
-    background-color: dodgerblue;
+    background-color:lavender;
+    color:black;
 
    }
    
