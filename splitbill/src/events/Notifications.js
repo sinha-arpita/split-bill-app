@@ -112,7 +112,7 @@ class Notifications extends React.Component {
           </tbody>
         </Table>
 
-        <h2> My Recievables </h2>
+        <h2 className="myr" > My Recievables </h2>
 
         <Table className="table2">
           <thead>

@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
-import "./App.css";
+import "./Users.css";
 
 class Users extends React.Component {
   state = {
@@ -11,14 +11,13 @@ class Users extends React.Component {
   render() {
     return (
       <div>
-        <h2> My Friends </h2>
+        <h2 className="fri"> My Friends </h2>
 
         <Table className=".table3">
           <thead>
             <tr>
               <th>Name</th>
               <th>Email</th>
-              
             </tr>
           </thead>
 
@@ -26,8 +25,8 @@ class Users extends React.Component {
             {this.state.users.map(user => {
               return (
                 <tr>
-                  <td> {user.username}</td>
-                  <td> {user.email} </td>
+                  <td className="tdu"> {user.username}</td>
+                  <td className="tdu"> {user.email} </td>
                 </tr>
               );
             })}
@@ -39,7 +38,8 @@ class Users extends React.Component {
   componentDidMount() {
     const headers = { authorization: localStorage.getItem("jwt") };
 
-    const endpoint = "https://arpita-sinha-split-the-bill.herokuapp.com/api/users/";
+    const endpoint =
+      "https://arpita-sinha-split-the-bill.herokuapp.com/api/users/";
     axios
       .get(endpoint, { headers })
       .then(res => {

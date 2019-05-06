@@ -25,12 +25,21 @@
   text-align: center;
 }
 .my {
-  font-size: 30px;
+  font-size: 35px;
   font-style: italic;
   color: purple;
   margin-right: 30px;
 
-  margin-top: 10px;
+  margin-top: 0;
+}
+.myr {
+  font-size: 35px;
+  font-style: italic;
+  color: purple;
+  margin-right: 30px;
+
+  margin-top:30 px;
+  margin-bottom:30 px;
 }
 
 .duesTable {
@@ -54,6 +63,7 @@
   
 }
 
+
 .td {
   margin-right: 30px;
 }
@@ -64,11 +74,4 @@
   color: white;
   font-style: normal;
   border: 1px solid blue;
-}
-.RecieveForm {
-  margin-top: 30px;
-  font-size: 18px;
-  background-color: rgb(160, 13, 140);
-  color: white;
-  font-style: normal;
 }

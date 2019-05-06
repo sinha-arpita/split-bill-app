@@ -67,12 +67,22 @@
   border: 1 px solid #c01d97;
   background-color: gray;
 }
-.welcome {
+.welcome{
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(133, 12, 160);
+  font-style: italic;
+  margin-top: 0;
+}
+.user {
   font-size: 35px;
   justify-content: center;
   align-items: center;
-  color: rgb(129, 32, 153);
+  color: rgb(230, 182, 241);
   font-style: italic;
+  margin-top: 0;
+  margin-left:70px;
 }
 .dash {
   font-style: normal;
@@ -91,3 +101,4 @@
   background-color: lavenderblush;
   width: 300px;
 }
+
